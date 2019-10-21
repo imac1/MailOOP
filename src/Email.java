@@ -15,15 +15,15 @@ public class Email {
     public Email(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("email created for: " + this.firstName + " " + this.lastName);
+       // System.out.println("email created for: " + this.firstName + " " + this.lastName);
 
         this.department = setDepartment();
-        System.out.println("You chose department: " + this.department);
+      //  System.out.println("You chose department: " + this.department);
 
         this.password = setPassword(defaultPasswordLength);
-        System.out.println("Your password is: " + this.password);
+      //  System.out.println("Your password is: " + this.password);
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + "." + companySuffix;
-        System.out.println("your email is: " + email);
+     //   System.out.println("your email is: " + email);
     }
 
     private String setDepartment() {
@@ -79,5 +79,12 @@ public class Email {
 
     public String getAlternateEmail() {
         return alternateEmail;
+    }
+
+    public String showInfo(){
+
+        return "Name: " + firstName + " " + lastName + "\n"
+                + "Company email: " + email + "\n"
+                + "Mailbox capacity: " + mailboxCapacity;
     }
 }
